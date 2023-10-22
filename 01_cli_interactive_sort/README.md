@@ -10,8 +10,6 @@
 
 <h2 align = "center"> Task description.</h2>
 
-### Завдання 1.
-
 Your first task is to write a small CLI application without any external
 dependencies that expects the user to enter a few words or numbers separated by
 a space. Next, the program should ask how to sort the user's input.
