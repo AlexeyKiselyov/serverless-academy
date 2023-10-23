@@ -5,8 +5,9 @@
 1.  <a href = "https://nodejs.org/uk" target="_blank" rel="noreferrer noopener">Need
     NODE.js.</a>
 2.  Write in terminal `cd src`.
-3.  Write in terminal `npm start` or `node index.js`.
-4.  You will see the result of running programs in the console.
+3.  Write in terminal `npm i` to load modules.
+4.  Write in terminal `npm start` or `node index.js`.
+5.  You will see the result of running programs in the console.
 
 <h2 align = "center"> Task description.</h2>
 

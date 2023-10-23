@@ -5,8 +5,9 @@
 1.  <a href = "https://nodejs.org/uk" target="_blank" rel="noreferrer noopener">Need
     NODE.js.</a>
 2.  Write in terminal `cd src`.
-3.  Add your Telegram credentials (`token` and `chatId` of the bot).
-4.  Write in terminal:
+3.  Write in terminal `npm i` to load modules.
+4.  Add your Telegram credentials (`token` and `chatId` of the bot).
+5.  Write in terminal:
 
 - `node index.js send-message 'Your message'` to send a message in your Telegram
   bot;
