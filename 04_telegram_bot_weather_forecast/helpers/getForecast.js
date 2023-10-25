@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const WEATHER_API_KEY = '2289f5541cc09772e1304e763540c89d';
+const WEATHER_API_KEY = '';
 const CITY = 'Dnipro';
 const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&units=metric&appid=${WEATHER_API_KEY}`;
 

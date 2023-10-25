@@ -6,7 +6,8 @@
     NODE.js.</a>
 2.  Write in terminal `cd src`.
 3.  Write in terminal `npm i` to load modules.
-4.  Add your Telegram credentials (`token` of the bot).
+4.  Add your Telegram credentials (`token` of the bot and
+    `openweathermap API key`).
 5.  Write in terminal:
 
 - `npm start` or `node forecastTgBot.js` to launch a bot;
