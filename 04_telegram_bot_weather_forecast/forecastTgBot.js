@@ -2,8 +2,7 @@ import TelegramBot from 'node-telegram-bot-api';
 
 import { optionsCity, optionsInterval } from './helpers/buttonsOptions.js';
 import { getForecast } from './helpers/getForecast.js';
-
-const TG_BOT_TOKEN = '';
+import { TG_BOT_TOKEN } from './helpers/constants.js';
 
 const bot = new TelegramBot(TG_BOT_TOKEN, { polling: true });
 
