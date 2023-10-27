@@ -1,7 +1,10 @@
 import axios from 'axios';
+import NodeCache from 'node-cache';
 
 import { MONO_API_URL } from './constants.js';
 import { getDate } from './getDate.js';
+
+const myCache = new NodeCache();
 
 export const getRate = async currency => {
   const uahCode = 980;
@@ -17,11 +20,25 @@ export const getRate = async currency => {
 
     const dateAndTime = getDate(date);
 
-    return `${dateAndTime} => Покупка: ${rateBuy}грн. => Продаж: ${rateSell}`;
+    const textToSend = `${dateAndTime} => Покупка: ${rateBuy}грн. => Продаж: ${rateSell}`;
+
+    const successCache = myCache.set(currency, textToSend);
+
+    if (!successCache) {
+      console.log('Не вдалося зберегти дані курсу в кеші!');
+    }
+
+    return textToSend;
   } catch (error) {
+    if (error.response.status === 429 && myCache.get(currency)) {
+      return myCache.get(currency);
+    } else if (error.response.status === 429) {
+      console.log(error.message);
+      return 'Вибачте за незручності. Спробуйте повторити трохи пізніше...';
+    }
+
     console.log(error.message);
+
     return error.message;
   }
 };
-
-// Need to Add cash 'Request failed with status code 429'
